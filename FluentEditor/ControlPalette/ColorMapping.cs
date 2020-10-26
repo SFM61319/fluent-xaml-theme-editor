@@ -159,10 +159,8 @@ namespace FluentEditor.ControlPalette
                     {
                         return;
                     }
-                    else
-                    {
-                        _updateInProgress[element] = true;
-                    }
+                    
+                    _updateInProgress[element] = true;
                 }
                 else
                 {
@@ -230,10 +228,8 @@ namespace FluentEditor.ControlPalette
         private bool IsSettingDarkColors(string title, string themeType)
         {
             string[] splitTitle = title.Split(new string[] { themeType }, StringSplitOptions.None);
-
-            if (splitTitle[0] == "")
-                return true;
-            return false;
+            
+            return splitTitle[0] == "";
         }
 
         public void Dispose()
